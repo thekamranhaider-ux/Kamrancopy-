@@ -9,10 +9,12 @@ export const ContactSection: React.FC = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState('');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const emailAddress = 'thekamranhaider@gmail.com';
-  const linkedinUrl = 'https://www.linkedin.com/in/kamran-haider-8827b83ab?utm_source=share_via&utm_content=profile&utm_medium=member_android';
+  const linkedinUrl = 'https://www.linkedin.com/in/kamran-haider-8827b83ab';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -20,10 +22,38 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
-    setSubmitted(true);
+
+    setIsSending(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mnjeebpg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          projectType: formData.projectType,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError('Something went wrong. Please try again or email me directly.');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again or email me directly.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -94,7 +124,7 @@ export const ContactSection: React.FC = () => {
                 >
                   <div className="flex items-center gap-2.5">
                     <Linkedin className="w-4 h-4 text-[#0F4C81]" />
-                    <span>linkedin.com/in/kamranhaidercopy</span>
+                    <span>linkedin.com/in/kamran-haider-8827b83ab</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0F4C81] transition-colors" />
                 </a>
@@ -221,11 +251,16 @@ export const ContactSection: React.FC = () => {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-xs text-red-600 font-medium">{error}</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 rounded-xl bg-[#0F4C81] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#0A375E] transition-all shadow-soft-md flex items-center justify-center gap-2 group"
+                    disabled={isSending}
+                    className="w-full py-3.5 px-6 rounded-xl bg-[#0F4C81] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#0A375E] transition-all shadow-soft-md flex items-center justify-center gap-2 group disabled:opacity-60"
                   >
-                    <span>Submit Message</span>
+                    <span>{isSending ? 'Sending...' : 'Submit Message'}</span>
                     <Send className="w-4 h-4 text-[#F7D64A] group-hover:translate-x-1 transition-transform" />
                   </button>
 
