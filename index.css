@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: #1E293B;
+    background-color: #F8FAFC;
+  }
+
+  h1, h2, h3, h4, .font-heading, .font-serif-title {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Custom scrollbar and accents */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Corporate Soft Shadows & Glows */
+.shadow-soft-sm {
+  box-shadow: 0 2px 8px -2px rgba(15, 76, 129, 0.06), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-soft-md {
+  box-shadow: 0 8px 24px -4px rgba(15, 76, 129, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 16px 36px -6px rgba(15, 76, 129, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Brand Utilities */
+.bg-royal-blue {
+  background-color: #0F4C81;
+}
+.text-royal-blue {
+  color: #0F4C81;
+}
+.border-royal-blue {
+  border-color: #0F4C81;
+}
+
+.bg-warm-gold {
+  background-color: #F7D64A;
+}
+.text-warm-gold {
+  color: #F7D64A;
+}
+.border-warm-gold {
+  border-color: #F7D64A;
+}
