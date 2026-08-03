@@ -11,8 +11,8 @@ export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const emailAddress = 'kamran.haider.copy@gmail.com';
-  const linkedinUrl = 'https://linkedin.com/in/kamranhaidercopy';
+  const emailAddress = 'thekamranhaider@gmail.com';
+  const linkedinUrl = 'https://www.linkedin.com/in/kamran-haider-8827b83ab?utm_source=share_via&utm_content=profile&utm_medium=member_android';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
