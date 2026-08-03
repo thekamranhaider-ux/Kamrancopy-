@@ -272,6 +272,28 @@ export const ContactSection: React.FC = () => {
 
         </div>
 
+        {/* Newsletter Section */}
+        <div className="mt-10 pt-8 border-t border-slate-200">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-heading font-bold text-slate-900">
+              Become a Better Copywriter.
+            </h3>
+
+            <h4 className="text-sm font-semibold text-[#0F4C81] mt-2">
+              Weekly Copywriting Tips. Real Marketing Insights. Better Results.
+            </h4>
+
+            <p className="text-sm text-slate-600 mt-4 max-w-lg mx-auto leading-relaxed">
+              Get practical copywriting tips, email marketing strategies, and conversion insights delivered straight to your inbox.
+            </p>
+          </div>
+
+          <div
+            className="ml-embedded"
+            data-form="cqukWm"
+          ></div>
+        </div>
+
       </div>
     </section>
   );
