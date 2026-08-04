@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stethoscope, BookOpen, Sparkles, Target, Search } from 'lucide-react';
+import { Eye, BookOpen, Sparkles, Target, Search } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -22,15 +22,15 @@ export const AboutSection: React.FC = () => {
           {/* Main Narrative Column */}
           <div className="lg:col-span-7 space-y-6 text-slate-700 leading-relaxed text-base sm:text-lg">
             <p className="font-heading font-semibold text-slate-900 text-xl leading-snug">
-              Kamran is transitioning from a healthcare background as a Home Care Nurse into direct-response copywriting.
+              Kamran is a copywriter building expertise in direct-response writing through original spec projects.
             </p>
 
             <p>
-              He is building his skills through original spec projects, studying real brand email sequences and ad campaigns, and learning proven copywriting frameworks like AIDA, PAS, BAB, and QUEST.
+              He studies real brand email sequences and ad campaigns, and practices proven copywriting frameworks like AIDA, PAS, BAB, and QUEST to sharpen his craft with every project.
             </p>
 
             <p>
-              Nursing taught him active listening, empathy, and deep observation — skills he now applies to customer research and audience psychology. He is detail-oriented, research-driven, and genuinely curious about what makes people pause, read, and take action.
+              He is detail-oriented, research-driven, and genuinely curious about what makes people pause, read, and take action — approaching every project by first understanding the audience deeply before writing a single word.
             </p>
 
             <div className="bg-[#0F4C81]/5 border-l-4 border-[#0F4C81] p-5 text-slate-800 text-base rounded-r-xl shadow-soft-sm">
@@ -50,12 +50,12 @@ export const AboutSection: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-start gap-3.5">
                   <div className="p-2.5 rounded-xl bg-[#0F4C81] text-[#F7D64A] shrink-0 shadow-soft-sm">
-                    <Stethoscope className="w-4 h-4" />
+                    <Eye className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-heading font-bold text-slate-900">Healthcare Precision</h4>
+                    <h4 className="text-sm font-heading font-bold text-slate-900">Attention to Detail</h4>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                      Bringing the rigorous observation and patient-first empathy of home care nursing directly to copy strategy.
+                      Careful, patient observation of audience behavior and language, applied directly to sharper copy strategy.
                     </p>
                   </div>
                 </div>
@@ -91,14 +91,14 @@ export const AboutSection: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-heading font-bold text-slate-900">Spec Work Dedication</h4>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                      Refining craft through full-length spec projects across skincare, healthcare, fitness, edtech, and e-commerce.
+                      Refining craft through full-length spec projects across skincare, fitness, edtech, and e-commerce.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-2">
-                <a
+                
                   href="#skills"
                   className="block text-center text-xs font-semibold text-[#0F4C81] hover:text-[#0A375E] uppercase tracking-wider border-t border-slate-200 pt-3"
                 >
