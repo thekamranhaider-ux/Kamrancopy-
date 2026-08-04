@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
         {/* Top Tag / Status Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#0F4C81]/20 text-[#0F4C81] text-xs font-semibold mb-8 shadow-soft-sm">
           <span className="w-2.5 h-2.5 rounded-full bg-[#F7D64A] ring-2 ring-[#F7D64A]/40 animate-pulse" />
-          <span>Former Home Care Nurse &bull; Transitioning into Copywriting</span>
+          <span>Building Expertise Through Original Spec Projects</span>
         </div>
 
         {/* Main Name Heading */}
@@ -28,19 +28,19 @@ export const HeroSection: React.FC = () => {
 
         {/* Tagline / Narrative Summary */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-10">
-          Applying detail-oriented nursing research habits and customer psychology to write clear, thoughtful, conversion-focused email, ad, and web copy.
+          Applying detail-oriented research habits and customer psychology to write clear, thoughtful, conversion-focused email, ad, and web copy.
         </p>
 
         {/* Primary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a
+          
             href="#spec-projects"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#0F4C81] text-white text-sm font-semibold tracking-wide hover:bg-[#0A375E] transition-all shadow-soft-md group"
           >
             <FileCode2 className="w-4 h-4 text-[#F7D64A] group-hover:scale-110 transition-transform" />
             <span>View Spec Projects</span>
           </a>
-          <a
+          
             href="#contact"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 text-sm font-semibold tracking-wide transition-all shadow-soft-sm"
           >
@@ -76,7 +76,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Scroll down subtle hint */}
         <div className="mt-14 flex justify-center">
-          <a
+          
             href="#about"
             className="text-slate-400 hover:text-[#0F4C81] transition-colors p-2 flex flex-col items-center gap-1 text-xs font-medium"
             aria-label="Scroll to About Section"
